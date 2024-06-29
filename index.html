@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Notes Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Study Notes Generator</h1>
+            <p class="lead">Get detailed and simplified answers to your questions.</p>
+        </div>
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <form id="question-form">
+                    <div class="form-group">
+                        <label for="question">Enter your question</label>
+                        <textarea id="question" class="form-control" rows="5" placeholder="Type your question here..." aria-describedby="questionHelp"></textarea>
+                        <small id="questionHelp" class="form-text text-muted">Please enter a clear and concise question.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Generate Answer</button>
+                </form>
+                <div id="loading-spinner" class="spinner-border text-primary mt-3" role="status" style="display: none;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h2 class="h4">Answer</h2>
+            <div id="answer" class="alert alert-secondary" role="alert"></div>
+            <button id="copy-button" class="btn btn-outline-secondary mt-2" style="display: none;"><i class="fas fa-copy"></i> Copy</button>
+        </div>
+    </div>
+    <footer class="text-center mt-5">
+        <p class="watermark">Developed By Zohan</p>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
